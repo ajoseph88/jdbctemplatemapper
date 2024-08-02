@@ -69,7 +69,7 @@ Note that this is not an ORM. It's a wrapper around JdbcTemplate so there are no
  
  jdbcTemplateMapper.delete(Product.class, 5); // delete using id
  
- // access JdbcTemplate and use its feature set.
+ // access JdbcTemplate and NamedParameterJdbcTemplate.
  JdbcTemplate jdbcTemplate = jtm.getJdbcTemplate();
  NamedParameterJdbcTemplate namedParameterJdbcTemplate = jtm.getNamedParameterJdbcTemplate();
  
