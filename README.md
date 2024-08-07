@@ -10,7 +10,7 @@ Note that this is not an ORM. It's a wrapper around JdbcTemplate so there are no
 ## Features
 
   1. One liners for CRUD.
-  2. Fluent style queries for hasOne, hasMany, hasMany through (many to many) and other ways to query relationships.
+  2. Fluent style queries for hasOne, hasMany, hasMany through (many to many) and other ways to query relationships. The query clauses are SQL so no need to learn a new query language.
   3. Auto assign properties for models:
       * auto assign created on, updated on.
       * auto assign created by, updated by using an implementation of interface IRecordOperatorResolver.
@@ -338,7 +338,7 @@ public JdbcTemplateMapper jdbcTemplateMapper(JdbcTemplate jdbcTemplate) {
 ## Querying relationships
 The library provides multiple ways to query relationships.
 Fluent style queries allow querying of hasOne, hasMany and hasMany through (many to many using an associated table) relationships.
-***The where, order by, limit clauses are SQL so no need to learn a new query language.***
+***The query clauses are SQL so no need to learn a new query language.***
 The IDE will provide suggestions to help chain the methods. Turn logging on (see logging section) to see the generated queries.  
 The QueryMerge class allows the results of a previous query to be merged with results of a new query. This comes in handy where multiple relationships need to be queried.
 
