@@ -47,27 +47,32 @@ Note that this is not an ORM. It's a wrapper around JdbcTemplate so there are no
  
      ...
  }
- 
+
+ ...
+ @Autowired
+ private JdbcTemplateMapper jtm;
+...
+
  Product product = new Product();
  product.setName("some product name");
  product.setPrice(10.25);
  product.setAvailableDate(LocalDateTime.now());
  
- jdbcTemplateMapper.insert(product); // because id type is auto increment, id value will be set on insert.
+ jtm.insert(product); // because id type is auto increment, id value will be set on insert.
 
- product = jdbcTemplateMapper.findById(Product.class, product.getId());
+ product = jtm.findById(Product.class, product.getId());
  product.setPrice(11.50);
- jdbcTemplateMapper.update(product);
+ jtm.update(product);
  
  // updateProperties() updates only the specified properties passed as arguments.
  product.setPrice(12.50);
- jdbcTemplateMapper.updateProperties(product, "price"); // will issue an SQL update only for price.
+ jtm.updateProperties(product, "price"); // will issue an SQL update only for price.
  
- List<Product> products = jdbcTemplateMapper.findAll(Product.class);
+ List<Product> products = jtm.findAll(Product.class);
  
- jdbcTemplateMapper.delete(product);
+ jtm.delete(product);
  
- jdbcTemplateMapper.delete(Product.class, 5); // delete using id
+ jtm.delete(Product.class, 5); // delete using id
  
  // access JdbcTemplate and NamedParameterJdbcTemplate.
  JdbcTemplate jdbcTemplate = jtm.getJdbcTemplate();
