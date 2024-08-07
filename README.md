@@ -109,6 +109,7 @@ spring.datasource.jdbc-url=jdbc:postgresql://HOST:PORT/THE_DATABASE_NAME
 spring.datasource.username=username
 spring.datasource.password=password
 spring.datasource.driver-class-name=org.postgresql.Driver
+...
 
   // DataSource properties are read from application.properties.
   @Bean
@@ -134,6 +135,7 @@ spring.datasource.jdbc-url=jdbc:mysql://HOST:PORT/THE_DATABASE_NAME
 spring.datasource.username=username
 spring.datasource.password=password
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+...
 
   // DataSource properties are read from application.properties.
   @Bean
@@ -157,6 +159,7 @@ spring.datasource.jdbc-url=jdbc:oracle:thin:@HOST:PORT/THE_SERVICE_NAME
 spring.datasource.username=username
 spring.datasource.password=password
 spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+...
 
   // DataSource properties are read from application.properties.
   @Bean
@@ -185,6 +188,7 @@ spring.datasource.jdbc-url=jdbc:sqlserver://HOST:PORT;databaseName=THE_DATABASE_
 spring.datasource.username=username
 spring.datasource.password=password
 spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+...
 
   // DataSource properties are read from application.properties.
   @Bean
