@@ -3,7 +3,7 @@
 A simple library that makes the usage of Spring JdbcTemplate less verbose for CRUD and relationship queries.
 Use it where appropriate and for other features keep using JdbcTemplate as you normally would.
  
-Note that this is not an ORM. It's a wrapper around JdbcTemplate so there are no sessions, flushing, level 1 and 2 caches, detached objects, magical inserts/updates/deletes, N+1 queries, unproxy, complicated mapping attribute, new query language and other challenges of an ORM.
+Note that this is not an ORM. It's a wrapper around JdbcTemplate so there are no sessions, flushing, level 1 and 2 caches, detached objects, magical inserts/updates/deletes, N+1 queries, unproxy, complicated mapping attributes, new query language and other challenges of an ORM.
   
 [Javadoc](https://jdbctemplatemapper.github.io/jdbctemplatemapper/index.html) | [Website](https://jdbctemplatemapper.github.io/jdbctemplate-crud-spring/)
  
