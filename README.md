@@ -687,22 +687,7 @@ An example for querying the following relationship: Order hasOne Customer, Order
          Order order = idOrderMap.get(orderId);
          if (order == null) {
            order = orderSelectMapper.buildModel(rs); 
-           /******************************************     
-           // customerSelectMapper.getResultSetModelIdColumnName() returns the id column alias 
-           // which is 'c_id'for the sql above.
-           Customer customer = null;
-           Object customerId = rs.getObject(customerSelectMapper.getResultSetModelIdColumnLabel());
-           if(customerId != null){
-             customer = idCustomerMap.get(customerId);
-             if (customer == null) {
-               customer = customerSelectMapper.buildModel(rs); 
-               idCustomerMap.put(customerId, customer);
-             }
-           }
-           *******************************************/
-           // above code refactored
-           Customer customer = getModel(rs, customerSelectMapper, idCustomerMap); // see definition of getModel() further below
-           
+           Customer customer = getModel(rs, customerSelectMapper, idCustomerMap); // see definition of getModel() further below         
            order.setCustomer(customer);
            idOrderMap.put(orderId, order);
          }
