@@ -652,13 +652,13 @@ An example for querying the following relationship: Order hasOne Customer, Order
 
  // no need to type in column names and aliases so we can concentrate on join and where clauses
  String sql = "select" 
-               + orderSelectMapper.getColumnsSql() 
+               + orderSelectMapper.getBeanColumnsSql() 
                + ","
-               + customerSelectMapper.getColumnsSql() 
+               + customerSelectMapper.getBeanColumnsSql() 
                + ","
-               + orderLineSelectMapper.getColumnsSql() 
+               + orderLineSelectMapper.getBeanColumnsSql() 
                + "," 
-               + productSelectMapper.getColumnsSql()
+               + productSelectMapper.getBeanColumnsSql()
                + " from orders o" 
                + " left join customer c on o.customer_id = c.id
                + " left join order_line ol on o.id = ol.order_id"
